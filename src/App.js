@@ -3,7 +3,7 @@ import "./App.css";
 import data from "./data";
 
 function App() {
-	const [number, setNumber] = useState(0);
+	const [number, setNumber] = useState(1);
 	const [text, setText] = useState([]);
 
 	const handleSubmit = (e) => {
@@ -14,7 +14,7 @@ function App() {
 	};
 
 	const handleChange = (value) => {
-		if (value <= 8 && value >= 0) {
+		if (value <= 8 && value > 0) {
 			setNumber(value);
 		}
 	};
@@ -26,19 +26,19 @@ function App() {
 			</header>
 			<section>
 				<form onSubmit={handleSubmit}>
-					<label htmlFor="number">
-						paragraph:
-						<input
-							type="number"
-							value={number}
-							onChange={(e) => handleChange(e.target.value)}
-						/>
-					</label>
+					<label htmlFor="number">paragraph:</label>
+					<input
+						type="number"
+						value={number}
+						onChange={(e) => handleChange(e.target.value)}
+					/>
 					<button type="submit">generate</button>
 				</form>
-				{text.map((item, index) => (
-					<p key={index}>{item}</p>
-				))}
+				<div className="paragraphs">
+					{text.map((item, index) => (
+						<p key={index}>{item}</p>
+					))}
+				</div>
 			</section>
 		</div>
 	);

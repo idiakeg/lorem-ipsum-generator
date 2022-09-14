@@ -1,0 +1,74 @@
+.app {
+	width: min(700px, 85vw);
+	margin: auto;
+}
+
+/* header */
+header {
+	text-align: center;
+}
+
+header h1 {
+	text-transform: uppercase;
+	color: var(--gray1);
+	font-weight: 600;
+	font-size: calc(1rem + 3vw);
+}
+
+/* section */
+section {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	align-items: center;
+}
+
+/* form */
+form {
+	display: flex;
+	gap: 0.8rem;
+	align-items: center;
+}
+
+label {
+	text-transform: capitalize;
+	font-weight: 500;
+	color: var(--gray2);
+}
+
+input[type="number"] {
+	width: 40px;
+	cursor: pointer;
+	outline: none;
+}
+
+input[type="number"]:focus {
+	outline: 2px solid skyblue;
+	border: none;
+}
+
+button {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1.3rem;
+	padding: 0.5rem 0.7rem;
+	color: var(--gray3);
+	border: none;
+	border-radius: 5px;
+	background-color: skyblue;
+	cursor: pointer;
+}
+
+/* paragraphs */
+.paragraphs {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.paragraphs p {
+	text-align: center;
+	margin: 0;
+	color: var(--gray3);
+	font-size: 1.3rem;
+}
